@@ -140,7 +140,7 @@ function Layout(props) {
                   <IconButton
                     color="inherit"
                     aria-label="open drawer"
-                    // onClick={handleDrawerOpen}
+                     onClick={() => setshowcomponent(0)}
                     edge="end"
                     sx={{ ...open }}
                   >
@@ -154,7 +154,7 @@ function Layout(props) {
                   <IconButton
                     color="inherit"
                     aria-label="open drawer"
-                    onClick={() => setshowcomponent(0)}
+                    onClick={() => setshowcomponent(1)}
                     edge="end"
                     sx={{ ...open }}
                   >
@@ -232,7 +232,7 @@ function Layout(props) {
               </ListItem> */}
             </List>
           </div>
-          <Drawer
+          {/* <Drawer
             sx={{
               width: drawerWidth,
               flexShrink: 0,
@@ -345,7 +345,7 @@ function Layout(props) {
                 Manage Disciplinary Actions
               </Typography>
             </Box>
-          </Drawer>
+          </Drawer> */}
           <Main open={open}>
             <DrawerHeader />
           </Main>
@@ -362,9 +362,9 @@ function Layout(props) {
         classes={classes.main}
       >
         {showcomponent === 1 ? (
-          <EmployeeDirectoryPage />
+          <Dashboard />
         ) : showcomponent === 2 ? (
-          <EmployeeOverviewPage />
+          <ChartsPage />
         ) : (
           <>
             <Grid container spacing={4}></Grid>
