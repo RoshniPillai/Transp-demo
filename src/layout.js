@@ -58,10 +58,12 @@ const styles = (theme) => ({
   },
   drawer: {
     // width: theme.layout.drawerWidth
-    width: 200
+    // width: 150
   },
   drawerPaper: {
-    width: "inherit"
+    // width: "inherit"
+    width: 150,
+    backgroundColor: theme.palette.background.default
   },
   toolbarIe11: {
     display: "flex"
@@ -138,20 +140,6 @@ function Layout(props) {
                   <IconButton
                     color="inherit"
                     aria-label="open drawer"
-                    onClick={() => setshowcomponent(0)}
-                    edge="end"
-                    sx={{ ...open }}
-                  >
-                    <WidgetsOutlinedIcon />
-                    <Typography variant="body1">Dashboard</Typography>
-                  </IconButton>
-                </ListItemIcon>
-              </ListItem>
-              <ListItem button>
-                <ListItemIcon>
-                  <IconButton
-                    color="inherit"
-                    aria-label="open drawer"
                     // onClick={handleDrawerOpen}
                     edge="end"
                     sx={{ ...open }}
@@ -161,6 +149,21 @@ function Layout(props) {
                   </IconButton>
                 </ListItemIcon>
               </ListItem>
+              <ListItem button>
+                <ListItemIcon>
+                  <IconButton
+                    color="inherit"
+                    aria-label="open drawer"
+                    onClick={() => setshowcomponent(0)}
+                    edge="end"
+                    sx={{ ...open }}
+                  >
+                    <WidgetsOutlinedIcon />
+                    <Typography variant="body1">Dashboard</Typography>
+                  </IconButton>
+                </ListItemIcon>
+              </ListItem>
+
               {/* <ListItem button>
                 <IconButton
                   color="inherit"

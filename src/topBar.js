@@ -88,7 +88,7 @@ export default function PrimarySearchAppBar() {
     <>
       <AppBar
         position="fixed"
-        style={{ maxWidth: `calc(100% - 200px)`, backgroundColor: "#041c49" }}
+        style={{ maxWidth: `calc(100% - 150px)`, backgroundColor: "#041c49" }}
       >
         <Toolbar>
           <Typography
