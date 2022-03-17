@@ -34,9 +34,8 @@ import ReportIcon from "@material-ui/icons/Report";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import WidgetsOutlinedIcon from "@mui/icons-material/WidgetsOutlined";
-import PeopleAltOutlinedIcon from "@mui/icons-material/PeopleAltOutlined";
+import HomeIcon from "@mui/icons-material/Home";
 import Button from "@material-ui/core/Button";
-
 
 const styles = (theme) => ({
   // The main flex container for the app's layout. Its min-height
@@ -52,14 +51,14 @@ const styles = (theme) => ({
   appBar: {
     // For full-height drawer
     //  maxWidth: `calc(100% - ${theme.layout.drawerWidth}px)`
-    maxWidth: `calc(100% - 100px)`
+    maxWidth: `calc(100% - 200px)`
   },
   toolbarActions: {
     marginLeft: "auto"
   },
   drawer: {
     // width: theme.layout.drawerWidth
-    width: 100
+    width: 200
   },
   drawerPaper: {
     width: "inherit"
@@ -143,7 +142,8 @@ function Layout(props) {
                     edge="end"
                     sx={{ ...open }}
                   >
-                    <WidgetsOutlinedIcon />Dashboard
+                    <WidgetsOutlinedIcon />
+                    <Typography variant="body1">Dashboard</Typography>
                   </IconButton>
                 </ListItemIcon>
               </ListItem>
@@ -152,19 +152,20 @@ function Layout(props) {
                   <IconButton
                     color="inherit"
                     aria-label="open drawer"
-                   // onClick={handleDrawerOpen}
+                    // onClick={handleDrawerOpen}
                     edge="end"
                     sx={{ ...open }}
                   >
-                    <PeopleAltOutlinedIcon />Home
+                    <HomeIcon />
+                    <Typography variant="body1">Home</Typography>
                   </IconButton>
                 </ListItemIcon>
               </ListItem>
-              <ListItem button>
+              {/* <ListItem button>
                 <IconButton
                   color="inherit"
                   aria-label="open drawer"
-                 // onClick={handleDrawerOpen}
+                  // onClick={handleDrawerOpen}
                   edge="end"
                   sx={{ ...open }}
                 >
@@ -225,7 +226,7 @@ function Layout(props) {
                     <ReportIcon />
                   </IconButton>
                 </ListItemIcon>
-              </ListItem>
+              </ListItem> */}
             </List>
           </div>
           <Drawer

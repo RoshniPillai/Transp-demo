@@ -7,6 +7,7 @@ import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import InputBase from "@mui/material/InputBase";
 import Badge from "@mui/material/Badge";
+import SearchIcon from "@mui/icons-material/Search";
 import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
 import AccountCircle from "@mui/icons-material/AccountCircle";
@@ -87,7 +88,7 @@ export default function PrimarySearchAppBar() {
     <>
       <AppBar
         position="fixed"
-        style={{ maxWidth: `calc(100% - 100px)`, backgroundColor: "#041c49" }}
+        style={{ maxWidth: `calc(100% - 200px)`, backgroundColor: "#041c49" }}
       >
         <Toolbar>
           <Typography
@@ -95,61 +96,18 @@ export default function PrimarySearchAppBar() {
             noWrap
             component="div"
             style={{ color: "#ffffff" }}
-            //sx={{ display: { xs: 'none', sm: 'block' } }}
           >
             TransparenSee
           </Typography>
-
-          <Box sx={{ flexGrow: 1 }} />
-          <Box sx={{ display: { xs: "none", md: "flex" } }}>
-            <IconButton
-              size="large"
-              aria-label="show 17 new notifications"
-              color="inherit"
-            >
-              <Badge
-                badgeContent={17}
-                color="error"
-                style={{ color: "#ffffff" }}
-              >
-                <NotificationsIcon />
-              </Badge>
-            </IconButton>
-            <Box m={2}>
-              <IconButton
-                size="small"
-                aria-label=""
-                //color=""
-                sx={{ color: "#ffffff !important" }}
-              >
-                i-See
-              </IconButton>
-            </Box>
-            <IconButton
-              size="large"
-              edge="end"
-              aria-label="account of current user"
-              aria-controls={menuId}
-              aria-haspopup="true"
-              onClick={handleProfileMenuOpen}
-              color="inherit"
-            >
-              <Avatar alt="" src="https://mui.com/static/images/avatar/2.jpg" />
-              {/* <AccountCircle /> */}
-            </IconButton>
-          </Box>
-          <Box sx={{ display: { xs: "flex", md: "none" } }}>
-            <IconButton
-              size="large"
-              aria-label="show more"
-              aria-controls={mobileMenuId}
-              aria-haspopup="true"
-              onClick={handleMobileMenuOpen}
-              color="inherit"
-            >
-              <MoreIcon />
-            </IconButton>
-          </Box>
+          <Search>
+            <SearchIconWrapper>
+              <SearchIcon />
+            </SearchIconWrapper>
+            <StyledInputBase
+              placeholder="Search…"
+              inputProps={{ "aria-label": "search" }}
+            />
+          </Search>
         </Toolbar>
       </AppBar>
     </>
