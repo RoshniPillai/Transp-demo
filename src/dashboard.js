@@ -15,19 +15,249 @@ import Stack from "@mui/material/Stack";
 
 export default function Dashboard() {
   return (
-    <Box m={2}>
+    <Box sx={{ flexGrow: 1 }}>
       <Grid container spacing={2}>
         <Grid item xs={3}>
-          <Button>
-            <Paper>
-              <Grid container>
+          <Button onClick={() => alert("clicked")}>
+            <Paper
+              elevation={2}
+              sx={{ padding: 2, backgroundColor: "#F5EFEF" }}
+            >
+              <Grid container spacing={1}>
+                <Grid xs={12}>
+                  <Typography
+                    variant="h6"
+                    display="block"
+                    gutterBottom
+                    align="center"
+                  >
+                    JIRA
+                  </Typography>
+                </Grid>
                 <Grid item xs={6}>
-                  <Typography variant="caption" display="block" gutterBottom>
+                  <Typography variant="caption" display="block" align="center">
                     New Issues
                   </Typography>
                 </Grid>
                 <Grid item xs={6}>
-                  <Typography variant="caption" display="block" gutterBottom>
+                  <Typography variant="caption" display="block" align="center">
+                    New Reports
+                  </Typography>
+                </Grid>
+              </Grid>
+            </Paper>
+          </Button>
+        </Grid>
+        <Grid item xs={3}>
+          <Button onClick={() => alert("clicked")}>
+            <Paper
+              elevation={2}
+              sx={{ padding: 2, backgroundColor: "#D0E2E2" }}
+            >
+              <Grid container spacing={1}>
+                <Grid xs={12}>
+                  <Typography
+                    variant="h6"
+                    display="block"
+                    gutterBottom
+                    align="center"
+                  >
+                    JIRA
+                  </Typography>
+                </Grid>
+                <Grid item xs={6}>
+                  <Typography variant="caption" display="block" align="center">
+                    New Issues
+                  </Typography>
+                </Grid>
+                <Grid item xs={6}>
+                  <Typography variant="caption" display="block" align="center">
+                    New Reports
+                  </Typography>
+                </Grid>
+              </Grid>
+            </Paper>
+          </Button>
+        </Grid>
+        <Grid item xs={3}>
+          <Button onClick={() => alert("clicked")}>
+            <Paper
+              elevation={2}
+              sx={{ padding: 2, backgroundColor: "#FFF2E5" }}
+            >
+              <Grid container spacing={1}>
+                <Grid xs={12}>
+                  <Typography
+                    variant="h6"
+                    display="block"
+                    gutterBottom
+                    align="center"
+                  >
+                    JIRA
+                  </Typography>
+                </Grid>
+                <Grid item xs={6}>
+                  <Typography variant="caption" display="block" align="center">
+                    New Issues
+                  </Typography>
+                </Grid>
+                <Grid item xs={6}>
+                  <Typography variant="caption" display="block" align="center">
+                    New Reports
+                  </Typography>
+                </Grid>
+              </Grid>
+            </Paper>
+          </Button>
+        </Grid>
+        <Grid item xs={3}>
+          <Button onClick={() => alert("clicked")}>
+            <Paper
+              elevation={2}
+              sx={{ padding: 2, backgroundColor: "#E9F3C2" }}
+            >
+              <Grid container spacing={1}>
+                <Grid xs={12}>
+                  <Typography
+                    variant="h6"
+                    display="block"
+                    gutterBottom
+                    align="center"
+                  >
+                    GitLab
+                  </Typography>
+                </Grid>
+                <Grid item xs={6}>
+                  <Typography variant="caption" display="block" align="center">
+                    New Issues
+                  </Typography>
+                </Grid>
+                <Grid item xs={6}>
+                  <Typography variant="caption" display="block" align="center">
+                    New Reports
+                  </Typography>
+                </Grid>
+              </Grid>
+            </Paper>
+          </Button>
+        </Grid>
+        <Grid item xs={3}>
+          <Button onClick={() => alert("clicked")}>
+            <Paper
+              elevation={2}
+              sx={{ padding: 2, backgroundColor: "#F3DABF" }}
+            >
+              <Grid container spacing={1}>
+                <Grid xs={12}>
+                  <Typography
+                    variant="h6"
+                    display="block"
+                    gutterBottom
+                    align="center"
+                  >
+                    JIRA
+                  </Typography>
+                </Grid>
+                <Grid item xs={6}>
+                  <Typography variant="caption" display="block" align="center">
+                    New Issues
+                  </Typography>
+                </Grid>
+                <Grid item xs={6}>
+                  <Typography variant="caption" display="block" align="center">
+                    New Reports
+                  </Typography>
+                </Grid>
+              </Grid>
+            </Paper>
+          </Button>
+        </Grid>
+        <Grid item xs={3}>
+          <Button onClick={() => alert("clicked")}>
+            <Paper
+              elevation={2}
+              sx={{ padding: 2, backgroundColor: "#CCF2FF" }}
+            >
+              <Grid container spacing={1}>
+                <Grid xs={12}>
+                  <Typography
+                    variant="h6"
+                    display="block"
+                    gutterBottom
+                    align="center"
+                  >
+                    JIRA
+                  </Typography>
+                </Grid>
+                <Grid item xs={6}>
+                  <Typography variant="caption" display="block" align="center">
+                    New Issues
+                  </Typography>
+                </Grid>
+                <Grid item xs={6}>
+                  <Typography variant="caption" display="block" align="center">
+                    New Reports
+                  </Typography>
+                </Grid>
+              </Grid>
+            </Paper>
+          </Button>
+        </Grid>
+        <Grid item xs={3}>
+          <Button onClick={() => alert("clicked")}>
+            <Paper
+              elevation={2}
+              sx={{ padding: 2, backgroundColor: "#F8E1A6" }}
+            >
+              <Grid container spacing={1}>
+                <Grid xs={12}>
+                  <Typography
+                    variant="h6"
+                    display="block"
+                    gutterBottom
+                    align="center"
+                  >
+                    JIRA
+                  </Typography>
+                </Grid>
+                <Grid item xs={6}>
+                  <Typography variant="caption" display="block" align="center">
+                    New Issues
+                  </Typography>
+                </Grid>
+                <Grid item xs={6}>
+                  <Typography variant="caption" display="block" align="center">
+                    New Reports
+                  </Typography>
+                </Grid>
+              </Grid>
+            </Paper>
+          </Button>
+        </Grid>
+        <Grid item xs={3}>
+          <Button onClick={() => alert("clicked")}>
+            <Paper
+              elevation={2}
+              sx={{ padding: 2, backgroundColor: "#C4C4E7" }}
+            >
+              <Grid container spacing={1}>
+                <Grid xs={12}>
+                  <Typography
+                    variant="h6"
+                    display="block"
+                    gutterBottom
+                    align="center"
+                  >
+                    JIRA
+                  </Typography>
+                </Grid>
+                <Grid item xs={6}>
+                  <Typography variant="caption" display="block" align="center">
+                    New Issues
+                  </Typography>
+                </Grid>
+                <Grid item xs={6}>
+                  <Typography variant="caption" display="block" align="center">
                     New Reports
                   </Typography>
                 </Grid>
