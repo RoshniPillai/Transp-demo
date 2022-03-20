@@ -32,7 +32,7 @@ const styles = (theme) => ({
   drawer: {
     // backgroundColor: "red"
     // width: theme.layout.drawerWidth
-     width: 150,
+    width: 150
   },
   drawerPaper: {
     width: "inherit"
@@ -40,7 +40,8 @@ const styles = (theme) => ({
     // backgroundColor: theme.palette.background.default
   },
   toolbarIe11: {
-    display: "flex"
+    display: "flex",
+    backgroundColor: "#041c49"
   },
   heading: {
     display: "flex",
@@ -97,7 +98,10 @@ function Layout(props) {
             <div className={classes.toolbarIe11}>
               <div className={classes.heading}>
                 <Typography variant="title">
-                  <img src="" alt="logo" width="50" />
+                  <img
+                    src="https://www.bankfab.com/-/media/fabgroup/logos/fablogo.svg?h=0&w=0&la=en&hash=2A1479C46C1F862C48E568B8FD48F96776F9F0FC"
+                    alt="logo"
+                  />
                 </Typography>
               </div>
             </div>
@@ -132,7 +136,7 @@ function Layout(props) {
                 </ListItemIcon>
               </ListItem>
 
-              <ListItem button>
+              {/* <ListItem button>
                 <IconButton
                   color="inherit"
                   aria-label="open drawer"
@@ -142,8 +146,8 @@ function Layout(props) {
                 >
                   <MailIcon />
                 </IconButton>
-              </ListItem>
-              <ListItem button>
+              </ListItem> */}
+              {/* <ListItem button>
                 <ListItemIcon>
                   <IconButton
                     color="inherit"
@@ -155,10 +159,10 @@ function Layout(props) {
                     <DraftsIcon />
                   </IconButton>
                 </ListItemIcon>
-              </ListItem>
+              </ListItem> */}
             </List>
           </div>
-         
+
           <Main open={open}>
             <DrawerHeader />
           </Main>

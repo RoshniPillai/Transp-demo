@@ -4,8 +4,8 @@ import ChartsPage from "./chartspage";
 export default function App() {
   return (
     <div className="App">
-      {/* <Layout /> */}
-      <ChartsPage />
+      <Layout />
+      {/* <ChartsPage /> */}
     </div>
   );
 }
