@@ -5,8 +5,21 @@ import Box from "@mui/material/Box";
 import Drawer from "@material-ui/core/Drawer";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
+import Link from "@mui/material/Link";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import EventIcon from "@mui/icons-material/Event";
+import Chip from "@mui/material/Chip";
+import Stack from "@mui/material/Stack";
+import InputAdornment from "@mui/material/InputAdornment";
+import FormControl from "@mui/material/FormControl";
+import OutlinedInput from "@mui/material/OutlinedInput";
 import IconButton from "@mui/material/IconButton";
-import SearchAppBar from "./topBar";
+import FlightTakeoffIcon from "@mui/icons-material/FlightTakeoff";
+import InputLabel from "@mui/material/InputLabel";
+
+import PrimarySearchAppBar from "./topBar";
+
 import List from "@material-ui/core/List";
 import { styled, useTheme } from "@mui/material/styles";
 import ListItem from "@material-ui/core/ListItem";
@@ -14,10 +27,13 @@ import ListItemIcon from "@material-ui/core/ListItemIcon";
 import Divider from "@material-ui/core/Divider";
 import DraftsIcon from "@material-ui/icons/Drafts";
 import MailIcon from "@material-ui/icons/Mail";
+import ReportIcon from "@material-ui/icons/Report";
+import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import WidgetsOutlinedIcon from "@mui/icons-material/WidgetsOutlined";
-import HomeIcon from "@mui/icons-material/Home";
+import PeopleAltOutlinedIcon from "@mui/icons-material/PeopleAltOutlined";
 import Button from "@material-ui/core/Button";
-import Dashboard from "./dashboard";
+
 const styles = (theme) => ({
   // The main flex container for the app's layout. Its min-height
   // is set to `100vh` so it always fill the height of the screen.
@@ -29,15 +45,20 @@ const styles = (theme) => ({
     overflow: "hidden",
     backgroundColor: theme.palette.background.default
   },
+  appBar: {
+    // For full-height drawer
+    //  maxWidth: `calc(100% - ${theme.layout.drawerWidth}px)`
+    maxWidth: `calc(100% - 100px)`
+  },
+  toolbarActions: {
+    marginLeft: "auto"
+  },
   drawer: {
-    // backgroundColor: "red"
     // width: theme.layout.drawerWidth
-    // width: 150
+    width: 100
   },
   drawerPaper: {
-    // width: "inherit"
-    width: 150,
-    backgroundColor: theme.palette.background.default
+    width: "inherit"
   },
   toolbarIe11: {
     display: "flex"
@@ -75,8 +96,7 @@ const DrawerHeader = styled("div")(({ theme }) => ({
   padding: theme.spacing(0, 1),
   // necessary for content to be below app bar
   ...theme.mixins.toolbar,
-  justifyContent: "flex-end",
-  backgroudColor: "red"
+  justifyContent: "flex-end"
 }));
 function Layout(props) {
   const { classes } = props;
@@ -84,12 +104,19 @@ function Layout(props) {
   const [open, setOpen] = React.useState(false);
   const [showcomponent, setshowcomponent] = React.useState(0);
 
+  const handleDrawerOpen = () => {
+    setOpen(true);
+  };
+
+  const handleDrawerClose = () => {
+    setOpen(false);
+  };
   return (
     <div className={classes.root}>
-      <SearchAppBar />
+      <PrimarySearchAppBar />
       <Drawer
         variant="permanent"
-        //className={classes.drawer}
+        className={classes.drawer}
         classes={{ paper: classes.drawerPaper }}
       >
         <>
@@ -112,8 +139,7 @@ function Layout(props) {
                     edge="end"
                     sx={{ ...open }}
                   >
-                    <HomeIcon />
-                    <Typography variant="body1">Home</Typography>
+                    <WidgetsOutlinedIcon />
                   </IconButton>
                 </ListItemIcon>
               </ListItem>
@@ -122,21 +148,19 @@ function Layout(props) {
                   <IconButton
                     color="inherit"
                     aria-label="open drawer"
-                    onClick={() => setshowcomponent(1)}
+                    onClick={handleDrawerOpen}
                     edge="end"
                     sx={{ ...open }}
                   >
-                    <WidgetsOutlinedIcon />
-                    <Typography variant="body1">Dashboard</Typography>
+                    <PeopleAltOutlinedIcon />
                   </IconButton>
                 </ListItemIcon>
               </ListItem>
-
               <ListItem button>
                 <IconButton
                   color="inherit"
                   aria-label="open drawer"
-                  // onClick={handleDrawerOpen}
+                  onClick={handleDrawerOpen}
                   edge="end"
                   sx={{ ...open }}
                 >
@@ -157,126 +181,54 @@ function Layout(props) {
                 </ListItemIcon>
               </ListItem>
             </List>
+            <Divider />
+            <List>
+              <ListItem button>
+                <ListItemIcon>
+                  <IconButton
+                    color="inherit"
+                    aria-label="open drawer"
+                    //onClick={handleDrawerOpen}
+                    edge="end"
+                    sx={{ ...open }}
+                  >
+                    <PeopleAltOutlinedIcon />
+                  </IconButton>
+                </ListItemIcon>
+              </ListItem>
+              <ListItem button>
+                <ListItemIcon>
+                  <IconButton
+                    color="inherit"
+                    aria-label="open drawer"
+                    //onClick={handleDrawerOpen}
+                    edge="end"
+                    sx={{ ...open }}
+                  >
+                    <DraftsIcon />
+                  </IconButton>
+                </ListItemIcon>
+              </ListItem>
+              <ListItem button>
+                <ListItemIcon>
+                  <IconButton
+                    color="inherit"
+                    aria-label="open drawer"
+                    // onClick={handleDrawerOpen}
+                    edge="end"
+                    sx={{ ...open }}
+                  >
+                    <ReportIcon />
+                  </IconButton>
+                </ListItemIcon>
+              </ListItem>
+            </List>
           </div>
-          {/* <Drawer
-            sx={{
-              width: drawerWidth,
-              flexShrink: 0,
-              "& .MuiDrawer-paper": {
-                width: drawerWidth,
-                boxSizing: "border-box",
-                position: "fixed",
-                top: 0,
-                left: 80
-              }
-            }}
-            variant="persistent"
-            anchor="left"
-            open={open}
-          >
-            <DrawerHeader style={{ textAlign: "left" }}>
-              <Box m={2}>
-                {" "}
-                <Typography variant="subtitle1">Employees</Typography>
-              </Box>
 
-              <IconButton onClick={handleDrawerClose}>
-                {theme.direction === "ltr" ? (
-                  <ChevronLeftIcon />
-                ) : (
-                  <ChevronRightIcon />
-                )}
-              </IconButton>
-            </DrawerHeader>
-            <Box m={2}>
-              <Typography
-                variant="caption"
-                display="block"
-                gutterBottom
-                align="left"
-              >
-                Employees Affairs
-              </Typography>
-              <Typography
-                variant="subtitle2"
-                gutterBottom
-                component="div"
-                align="left"
-              >
-                <Button size="small" onClick={() => setshowcomponent(1)}>
-                  Employees Directory
-                </Button>
-              </Typography>
-              <Typography
-                variant="subtitle2"
-                gutterBottom
-                // component="div"
-                align="left"
-                style={{ textTransform: "lowercase" }}
-              >
-                <Button size="small" onClick={() => setshowcomponent(2)}>
-                  Employees Management
-                </Button>
-              </Typography>
-              <Typography
-                variant="subtitle2"
-                gutterBottom
-                component="div"
-                align="left"
-              >
-                Mass Action
-              </Typography>
-            </Box>
-            <Box m={2}>
-              <Typography
-                variant="caption"
-                display="block"
-                gutterBottom
-                align="left"
-              >
-                Tasks
-              </Typography>
-              <Typography
-                variant="subtitle2"
-                gutterBottom
-                component="div"
-                align="left"
-              >
-                My Taks
-              </Typography>
-              <Typography
-                variant="subtitle2"
-                gutterBottom
-                component="div"
-                align="left"
-              >
-                Manage Tasks
-              </Typography>
-            </Box>
-            <Box m={2}>
-              <Typography
-                variant="caption"
-                display="block"
-                gutterBottom
-                align="left"
-              >
-                Disciplinary Actions
-              </Typography>
-              <Typography
-                variant="subtitle2"
-                gutterBottom
-                component="div"
-                align="left"
-              >
-                Manage Disciplinary Actions
-              </Typography>
-            </Box>
-          </Drawer> */}
           <Main open={open}>
             <DrawerHeader />
           </Main>
         </>
-        {/* <NavItems /> */}
       </Drawer>
       <Box
         p={3}
@@ -288,13 +240,15 @@ function Layout(props) {
         classes={classes.main}
       >
         {showcomponent === 1 ? (
-          <Dashboard />
+          <></>
         ) : showcomponent === 2 ? (
-          // <ChartsPage />
-          <>this is charts page</>
+          <></>
         ) : (
           <>
-            <Grid container spacing={4}></Grid>
+            <Grid container spacing={4}>
+              
+              
+            </Grid>
           </>
         )}
       </Box>
