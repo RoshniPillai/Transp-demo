@@ -2,30 +2,32 @@ import React from "react";
 import { withStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Box from "@mui/material/Box";
-import Drawer from "@material-ui/core/Drawer";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
-import Link from "@mui/material/Link";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import EventIcon from "@mui/icons-material/Event";
-import Chip from "@mui/material/Chip";
-import Stack from "@mui/material/Stack";
 
 export default function Dashboard() {
+  const [showDetails, setshowDetails] = React.useState(false);
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <Grid container spacing={2}>
+      {showDetails ? <>this is charts page</>
+      :
+      <>
+      <Grid
+        container
+        direction="row"
+        justifyContent="center"
+        alignItems="center"
+      >
         <Grid item xs={3}>
           <Button>
             <Paper
               elevation={2}
-              sx={{ padding: 2, backgroundColor: "#F5EFEF" }}
+              sx={{ maxWidth: "200px", padding: 1, backgroundColor: "#F5EFEF" }}
             >
               <Grid container spacing={1}>
                 <Grid xs={12}>
-                  <Typography variant="h6" display="block" align="center">
+                  <Typography variant="body1" display="block" align="center">
                     JIRA
                   </Typography>
                 </Grid>
@@ -49,11 +51,11 @@ export default function Dashboard() {
           <Button>
             <Paper
               elevation={2}
-              sx={{ padding: 2, backgroundColor: "#D0E2E2" }}
+              sx={{ maxWidth: "200px", padding: 1, backgroundColor: "#D0E2E2" }}
             >
               <Grid container spacing={1}>
                 <Grid xs={12}>
-                  <Typography variant="h6" display="block" align="center">
+                  <Typography variant="body1" display="block" align="center">
                     JIRA
                   </Typography>
                 </Grid>
@@ -77,11 +79,11 @@ export default function Dashboard() {
           <Button>
             <Paper
               elevation={2}
-              sx={{ padding: 2, backgroundColor: "#FFF2E5" }}
+              sx={{ maxWidth: "200px", padding: 1, backgroundColor: "#FFF2E5" }}
             >
               <Grid container spacing={1}>
                 <Grid xs={12}>
-                  <Typography variant="h6" display="block" align="center">
+                  <Typography variant="body1" display="block" align="center">
                     JIRA
                   </Typography>
                 </Grid>
@@ -92,7 +94,7 @@ export default function Dashboard() {
                   </Typography>
                 </Grid>
                 <Grid item xs={6}>
-                  0
+                  8
                   <Typography variant="caption" display="block" align="center">
                     New Reports
                   </Typography>
@@ -102,14 +104,14 @@ export default function Dashboard() {
           </Button>
         </Grid>
         <Grid item xs={3}>
-          <Button>
+          <Button onClick={setshowDetails(false)}>
             <Paper
               elevation={2}
-              sx={{ padding: 2, backgroundColor: "#E9F3C2" }}
+              sx={{ maxWidth: "200px", padding: 1, backgroundColor: "#E9F3C2" }}
             >
               <Grid container spacing={1}>
                 <Grid xs={12}>
-                  <Typography variant="h6" display="block" align="center">
+                  <Typography variant="body1" display="block" align="center">
                     GitLab
                   </Typography>
                 </Grid>
@@ -133,11 +135,11 @@ export default function Dashboard() {
           <Button>
             <Paper
               elevation={2}
-              sx={{ padding: 2, backgroundColor: "#F3DABF" }}
+              sx={{ maxWidth: "200px", padding: 1, backgroundColor: "#F3DABF" }}
             >
               <Grid container spacing={1}>
                 <Grid xs={12}>
-                  <Typography variant="h6" display="block" align="center">
+                  <Typography variant="body1" display="block" align="center">
                     JIRA
                   </Typography>
                 </Grid>
@@ -161,11 +163,11 @@ export default function Dashboard() {
           <Button>
             <Paper
               elevation={2}
-              sx={{ padding: 2, backgroundColor: "#CCF2FF" }}
+              sx={{ maxWidth: "200px", padding: 1, backgroundColor: "#CCF2FF" }}
             >
               <Grid container spacing={1}>
                 <Grid xs={12}>
-                  <Typography variant="h6" display="block" align="center">
+                  <Typography variant="body1" display="block" align="center">
                     JIRA
                   </Typography>
                 </Grid>
@@ -189,11 +191,11 @@ export default function Dashboard() {
           <Button>
             <Paper
               elevation={2}
-              sx={{ padding: 2, backgroundColor: "#F8E1A6" }}
+              sx={{ maxWidth: "200px", padding: 1, backgroundColor: "#F8E1A6" }}
             >
               <Grid container spacing={1}>
                 <Grid xs={12}>
-                  <Typography variant="h6" display="block" align="center">
+                  <Typography variant="body1" display="block" align="center">
                     JIRA
                   </Typography>
                 </Grid>
@@ -217,11 +219,11 @@ export default function Dashboard() {
           <Button>
             <Paper
               elevation={2}
-              sx={{ padding: 2, backgroundColor: "#C4C4E7" }}
+              sx={{ maxWidth: "200px", padding: 1, backgroundColor: "#C4C4E7" }}
             >
               <Grid container spacing={1}>
                 <Grid xs={12}>
-                  <Typography variant="h6" display="block" align="center">
+                  <Typography variant="body1" display="block" align="center">
                     JIRA
                   </Typography>
                 </Grid>
@@ -242,6 +244,8 @@ export default function Dashboard() {
           </Button>
         </Grid>
       </Grid>
+      </>
+      }      
     </Box>
   );
 }
