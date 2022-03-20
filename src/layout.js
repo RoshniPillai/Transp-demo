@@ -5,20 +5,7 @@ import Box from "@mui/material/Box";
 import Drawer from "@material-ui/core/Drawer";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
-import Link from "@mui/material/Link";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import EventIcon from "@mui/icons-material/Event";
-import Chip from "@mui/material/Chip";
-import Stack from "@mui/material/Stack";
-import InputAdornment from "@mui/material/InputAdornment";
-import FormControl from "@mui/material/FormControl";
-import OutlinedInput from "@mui/material/OutlinedInput";
 import IconButton from "@mui/material/IconButton";
-import FlightTakeoffIcon from "@mui/icons-material/FlightTakeoff";
-import InputLabel from "@mui/material/InputLabel";
-import ChevronLeftOutlinedIcon from "@mui/icons-material/ChevronLeftOutlined";
-import ChevronRightOutlinedIcon from "@mui/icons-material/ChevronRightOutlined";
 import SearchAppBar from "./topBar";
 import List from "@material-ui/core/List";
 import { styled, useTheme } from "@mui/material/styles";
@@ -27,9 +14,6 @@ import ListItemIcon from "@material-ui/core/ListItemIcon";
 import Divider from "@material-ui/core/Divider";
 import DraftsIcon from "@material-ui/icons/Drafts";
 import MailIcon from "@material-ui/icons/Mail";
-import ReportIcon from "@material-ui/icons/Report";
-import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
-import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import WidgetsOutlinedIcon from "@mui/icons-material/WidgetsOutlined";
 import HomeIcon from "@mui/icons-material/Home";
 import Button from "@material-ui/core/Button";
@@ -45,15 +29,8 @@ const styles = (theme) => ({
     overflow: "hidden",
     backgroundColor: theme.palette.background.default
   },
-  appBar: {
-    // For full-height drawer
-    //  maxWidth: `calc(100% - ${theme.layout.drawerWidth}px)`
-    maxWidth: `calc(100% - 200px)`
-  },
-  toolbarActions: {
-    marginLeft: "auto"
-  },
   drawer: {
+    // backgroundColor: "red"
     // width: theme.layout.drawerWidth
     // width: 150
   },
@@ -98,7 +75,8 @@ const DrawerHeader = styled("div")(({ theme }) => ({
   padding: theme.spacing(0, 1),
   // necessary for content to be below app bar
   ...theme.mixins.toolbar,
-  justifyContent: "flex-end"
+  justifyContent: "flex-end",
+  backgroudColor: "red"
 }));
 function Layout(props) {
   const { classes } = props;
@@ -106,19 +84,12 @@ function Layout(props) {
   const [open, setOpen] = React.useState(false);
   const [showcomponent, setshowcomponent] = React.useState(0);
 
-  const handleDrawerOpen = () => {
-    setOpen(true);
-  };
-
-  const handleDrawerClose = () => {
-    setOpen(false);
-  };
   return (
     <div className={classes.root}>
       <SearchAppBar />
       <Drawer
         variant="permanent"
-        className={classes.drawer}
+        //className={classes.drawer}
         classes={{ paper: classes.drawerPaper }}
       >
         <>
