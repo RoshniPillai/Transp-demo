@@ -32,7 +32,7 @@ const styles = (theme) => ({
   drawer: {
     // backgroundColor: "red"
     // width: theme.layout.drawerWidth
-     width: 100,
+     width: 150,
   },
   drawerPaper: {
     width: "inherit"
@@ -158,120 +158,7 @@ function Layout(props) {
               </ListItem>
             </List>
           </div>
-          {/* <Drawer
-            sx={{
-              width: drawerWidth,
-              flexShrink: 0,
-              "& .MuiDrawer-paper": {
-                width: drawerWidth,
-                boxSizing: "border-box",
-                position: "fixed",
-                top: 0,
-                left: 80
-              }
-            }}
-            variant="persistent"
-            anchor="left"
-            open={open}
-          >
-            <DrawerHeader style={{ textAlign: "left" }}>
-              <Box m={2}>
-                {" "}
-                <Typography variant="subtitle1">Employees</Typography>
-              </Box>
-
-              <IconButton onClick={handleDrawerClose}>
-                {theme.direction === "ltr" ? (
-                  <ChevronLeftIcon />
-                ) : (
-                  <ChevronRightIcon />
-                )}
-              </IconButton>
-            </DrawerHeader>
-            <Box m={2}>
-              <Typography
-                variant="caption"
-                display="block"
-                gutterBottom
-                align="left"
-              >
-                Employees Affairs
-              </Typography>
-              <Typography
-                variant="subtitle2"
-                gutterBottom
-                component="div"
-                align="left"
-              >
-                <Button size="small" onClick={() => setshowcomponent(1)}>
-                  Employees Directory
-                </Button>
-              </Typography>
-              <Typography
-                variant="subtitle2"
-                gutterBottom
-                // component="div"
-                align="left"
-                style={{ textTransform: "lowercase" }}
-              >
-                <Button size="small" onClick={() => setshowcomponent(2)}>
-                  Employees Management
-                </Button>
-              </Typography>
-              <Typography
-                variant="subtitle2"
-                gutterBottom
-                component="div"
-                align="left"
-              >
-                Mass Action
-              </Typography>
-            </Box>
-            <Box m={2}>
-              <Typography
-                variant="caption"
-                display="block"
-                gutterBottom
-                align="left"
-              >
-                Tasks
-              </Typography>
-              <Typography
-                variant="subtitle2"
-                gutterBottom
-                component="div"
-                align="left"
-              >
-                My Taks
-              </Typography>
-              <Typography
-                variant="subtitle2"
-                gutterBottom
-                component="div"
-                align="left"
-              >
-                Manage Tasks
-              </Typography>
-            </Box>
-            <Box m={2}>
-              <Typography
-                variant="caption"
-                display="block"
-                gutterBottom
-                align="left"
-              >
-                Disciplinary Actions
-              </Typography>
-              <Typography
-                variant="subtitle2"
-                gutterBottom
-                component="div"
-                align="left"
-              >
-                Manage Disciplinary Actions
-              </Typography>
-            </Box>
-          </Drawer> */}
+         
           <Main open={open}>
             <DrawerHeader />
           </Main>
