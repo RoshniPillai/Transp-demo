@@ -19,6 +19,8 @@ import FlightTakeoffIcon from "@mui/icons-material/FlightTakeoff";
 import InputLabel from "@mui/material/InputLabel";
 
 import PrimarySearchAppBar from "./topBar";
+import ChartsPage from "./chartspage";
+import Dashboard from "./dashboard";
 
 import List from "@material-ui/core/List";
 import { styled, useTheme } from "@mui/material/styles";
@@ -28,8 +30,6 @@ import Divider from "@material-ui/core/Divider";
 import DraftsIcon from "@material-ui/icons/Drafts";
 import MailIcon from "@material-ui/icons/Mail";
 import ReportIcon from "@material-ui/icons/Report";
-import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
-import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import WidgetsOutlinedIcon from "@mui/icons-material/WidgetsOutlined";
 import PeopleAltOutlinedIcon from "@mui/icons-material/PeopleAltOutlined";
 import Button from "@material-ui/core/Button";
@@ -139,7 +139,22 @@ function Layout(props) {
                     edge="end"
                     sx={{ ...open }}
                   >
+                    <HomeIcon />
+                    <Typography variant="body1">Home</Typography>
+                  </IconButton>
+                </ListItemIcon>
+              </ListItem>
+              <ListItem button>
+                <ListItemIcon>
+                  <IconButton
+                    color="inherit"
+                    aria-label="open drawer"
+                    onClick={() => setshowcomponent(1)}
+                    edge="end"
+                    sx={{ ...open }}
+                  >
                     <WidgetsOutlinedIcon />
+                    <Typography variant="body1">Dashboard</Typography>
                   </IconButton>
                 </ListItemIcon>
               </ListItem>
@@ -181,48 +196,6 @@ function Layout(props) {
                 </ListItemIcon>
               </ListItem>
             </List>
-            <Divider />
-            <List>
-              <ListItem button>
-                <ListItemIcon>
-                  <IconButton
-                    color="inherit"
-                    aria-label="open drawer"
-                    //onClick={handleDrawerOpen}
-                    edge="end"
-                    sx={{ ...open }}
-                  >
-                    <PeopleAltOutlinedIcon />
-                  </IconButton>
-                </ListItemIcon>
-              </ListItem>
-              <ListItem button>
-                <ListItemIcon>
-                  <IconButton
-                    color="inherit"
-                    aria-label="open drawer"
-                    //onClick={handleDrawerOpen}
-                    edge="end"
-                    sx={{ ...open }}
-                  >
-                    <DraftsIcon />
-                  </IconButton>
-                </ListItemIcon>
-              </ListItem>
-              <ListItem button>
-                <ListItemIcon>
-                  <IconButton
-                    color="inherit"
-                    aria-label="open drawer"
-                    // onClick={handleDrawerOpen}
-                    edge="end"
-                    sx={{ ...open }}
-                  >
-                    <ReportIcon />
-                  </IconButton>
-                </ListItemIcon>
-              </ListItem>
-            </List>
           </div>
 
           <Main open={open}>
@@ -240,15 +213,12 @@ function Layout(props) {
         classes={classes.main}
       >
         {showcomponent === 1 ? (
-          <></>
+          <Dashboard />
         ) : showcomponent === 2 ? (
-          <></>
+          <ChartsPage />
         ) : (
           <>
-            <Grid container spacing={4}>
-              
-              
-            </Grid>
+            <Grid container spacing={4}></Grid>
           </>
         )}
       </Box>
