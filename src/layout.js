@@ -17,11 +17,8 @@ import OutlinedInput from "@mui/material/OutlinedInput";
 import IconButton from "@mui/material/IconButton";
 import FlightTakeoffIcon from "@mui/icons-material/FlightTakeoff";
 import InputLabel from "@mui/material/InputLabel";
-
-import Fab from "@mui/material/Fab";
 import ChevronLeftOutlinedIcon from "@mui/icons-material/ChevronLeftOutlined";
 import ChevronRightOutlinedIcon from "@mui/icons-material/ChevronRightOutlined";
-
 import SearchAppBar from "./topBar";
 import List from "@material-ui/core/List";
 import { styled, useTheme } from "@mui/material/styles";
@@ -36,7 +33,7 @@ import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import WidgetsOutlinedIcon from "@mui/icons-material/WidgetsOutlined";
 import HomeIcon from "@mui/icons-material/Home";
 import Button from "@material-ui/core/Button";
-
+import Dashboard from "./dashboard";
 const styles = (theme) => ({
   // The main flex container for the app's layout. Its min-height
   // is set to `100vh` so it always fill the height of the screen.
@@ -140,7 +137,7 @@ function Layout(props) {
                   <IconButton
                     color="inherit"
                     aria-label="open drawer"
-                     onClick={() => setshowcomponent(0)}
+                    onClick={() => setshowcomponent(0)}
                     edge="end"
                     sx={{ ...open }}
                   >
@@ -164,7 +161,7 @@ function Layout(props) {
                 </ListItemIcon>
               </ListItem>
 
-              {/* <ListItem button>
+              <ListItem button>
                 <IconButton
                   color="inherit"
                   aria-label="open drawer"
@@ -188,48 +185,6 @@ function Layout(props) {
                   </IconButton>
                 </ListItemIcon>
               </ListItem>
-            </List>
-            <Divider />
-            <List>
-              <ListItem button>
-                <ListItemIcon>
-                  <IconButton
-                    color="inherit"
-                    aria-label="open drawer"
-                    //onClick={handleDrawerOpen}
-                    edge="end"
-                    sx={{ ...open }}
-                  >
-                    <PeopleAltOutlinedIcon />
-                  </IconButton>
-                </ListItemIcon>
-              </ListItem>
-              <ListItem button>
-                <ListItemIcon>
-                  <IconButton
-                    color="inherit"
-                    aria-label="open drawer"
-                    //onClick={handleDrawerOpen}
-                    edge="end"
-                    sx={{ ...open }}
-                  >
-                    <DraftsIcon />
-                  </IconButton>
-                </ListItemIcon>
-              </ListItem>
-              <ListItem button>
-                <ListItemIcon>
-                  <IconButton
-                    color="inherit"
-                    aria-label="open drawer"
-                    // onClick={handleDrawerOpen}
-                    edge="end"
-                    sx={{ ...open }}
-                  >
-                    <ReportIcon />
-                  </IconButton>
-                </ListItemIcon>
-              </ListItem> */}
             </List>
           </div>
           {/* <Drawer
@@ -364,7 +319,8 @@ function Layout(props) {
         {showcomponent === 1 ? (
           <Dashboard />
         ) : showcomponent === 2 ? (
-          <ChartsPage />
+          // <ChartsPage />
+          <>this is charts page</>
         ) : (
           <>
             <Grid container spacing={4}></Grid>
