@@ -15,7 +15,7 @@ import InputAdornment from "@mui/material/InputAdornment";
 import FormControl from "@mui/material/FormControl";
 import OutlinedInput from "@mui/material/OutlinedInput";
 import IconButton from "@mui/material/IconButton";
-import FlightTakeoffIcon from "@mui/icons-material/FlightTakeoff";
+import HomeIcon from "@mui/icons-material/Home";
 import InputLabel from "@mui/material/InputLabel";
 
 import PrimarySearchAppBar from "./topBar";
@@ -163,7 +163,7 @@ function Layout(props) {
                   <IconButton
                     color="inherit"
                     aria-label="open drawer"
-                    onClick={handleDrawerOpen}
+                    // onClick={handleDrawerOpen}
                     edge="end"
                     sx={{ ...open }}
                   >
@@ -171,17 +171,7 @@ function Layout(props) {
                   </IconButton>
                 </ListItemIcon>
               </ListItem>
-              <ListItem button>
-                <IconButton
-                  color="inherit"
-                  aria-label="open drawer"
-                  onClick={handleDrawerOpen}
-                  edge="end"
-                  sx={{ ...open }}
-                >
-                  <MailIcon />
-                </IconButton>
-              </ListItem>
+
               <ListItem button>
                 <ListItemIcon>
                   <IconButton
