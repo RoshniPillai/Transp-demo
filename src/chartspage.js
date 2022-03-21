@@ -8,7 +8,7 @@ import Tab from '@mui/material/Tab';
 import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
-
+import EnhancedTableHead from "./tableSection";
 import LineRechartComponent from "./linechart";
 import PieRechartComponent from "./piechart";
 import PieComponent from "./piechartRate.js";
@@ -94,7 +94,22 @@ function ChartsPage(props) {
           </TabList>
         </Box>
         <TabPanel value="1">
+        <Grid
+          container
+        >
+          <Grid item lg={4}>
+            <Button>
+              <Paper elevation={2} sx={{}}>
+              
           <ActiveShapePie />
+            Services within Domain 1
+              </Paper>
+            </Button>
+          </Grid>
+          <Grid item lg={4}>
+            <EnhancedTableHead />
+          </Grid>
+          </Grid>
         </TabPanel>
         <TabPanel value="2">Domain 2</TabPanel>
         <TabPanel value="3">Domain 3</TabPanel>
