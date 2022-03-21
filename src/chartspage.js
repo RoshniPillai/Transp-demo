@@ -1,10 +1,13 @@
 import React from "react";
 import { withStyles } from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import Button from "@mui/material/Button";
+import Tab from '@mui/material/Tab';
+import TabContext from '@mui/lab/TabContext';
+import TabList from '@mui/lab/TabList';
+import TabPanel from '@mui/lab/TabPanel';
 
 import LineRechartComponent from "./linechart";
 import PieRechartComponent from "./piechart";
@@ -16,8 +19,15 @@ const styles = (theme) => ({});
 
 function ChartsPage(props) {
   const { classes } = props;
+  const [showDetails, setshowDetails] = React.useState(0);
+  const [value, setValue] = React.useState('1');
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
   return (
     <>
+    { showDetails === 0 ? <>
       <Box sx={{ flexGrow: 1 }}>
         <Grid
           container
@@ -53,11 +63,12 @@ function ChartsPage(props) {
           </Grid>
           <Grid item lg={1}></Grid>
           <Grid item lg={4}>
-            <Button>
+            
               <Paper elevation={2} sx={{}}>
                 project with/without pipeline -
                 <CustomBarChart />                
               </Paper>
+              <Button onClick={() => setshowDetails(1)}> View deails
             </Button>
           </Grid>
           <Grid item lg={6}>
@@ -70,6 +81,23 @@ function ChartsPage(props) {
           </Grid>
         </Grid>
       </Box>
+      </> :
+      <>
+        <Box sx={{ width: '100%', typography: 'body1' }}>
+      <TabContext value={value}>
+        <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+          <TabList onChange={handleChange} aria-label="lab API tabs example">
+            <Tab label="Domain 1" value="1" />
+            <Tab label="Domain 2" value="2" />
+            <Tab label="Domain 3" value="3" />
+          </TabList>
+        </Box>
+        <TabPanel value="1">Domain 1</TabPanel>
+        <TabPanel value="2">Domain 2</TabPanel>
+        <TabPanel value="3">Domain 3</TabPanel>
+      </TabContext>
+    </Box>
+      </>}
     </>
   );
 }
