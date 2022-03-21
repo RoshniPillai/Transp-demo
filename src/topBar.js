@@ -99,15 +99,22 @@ export default function PrimarySearchAppBar() {
           >
             TransparenSee
           </Typography>
-          <Search>
-            <SearchIconWrapper>
-              <SearchIcon />
-            </SearchIconWrapper>
-            <StyledInputBase
-              placeholder="Search…"
-              inputProps={{ "aria-label": "search" }}
-            />
-          </Search>
+          <Box
+            display="flex"
+            flexGrow={1}
+            alignItems="end"
+            justifyContent="end"
+          >
+            <Search>
+              <SearchIconWrapper>
+                <SearchIcon />
+              </SearchIconWrapper>
+              <StyledInputBase
+                placeholder="Search…"
+                inputProps={{ "aria-label": "search" }}
+              />
+            </Search>
+          </Box>
         </Toolbar>
       </AppBar>
     </>
