@@ -42,7 +42,7 @@ class LineRechartComponent extends React.Component {
     return (
           <LineChart
         width={400}
-        height={250}
+        height={300}
         data={this.data}
         margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
       >

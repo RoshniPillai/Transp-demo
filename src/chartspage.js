@@ -8,6 +8,7 @@ import Button from "@mui/material/Button";
 
 import LineRechartComponent from "./linechart";
 import PieRechartComponent from "./piechart";
+import PieComponent from "./piechartRate.js"
 const styles = (theme) => ({});
 
 function ChartsPage(props) {
@@ -29,9 +30,9 @@ function ChartsPage(props) {
                 sx={{
                   //maxWidth: "200px",
                   //padding: 1,
-                  backgroundColor: "#F5EFEF"
+                 // backgroundColor: "#F5EFEF"
                 }}
-              >
+              >Project  branchng strategy
                 <LineRechartComponent />
               </Paper>
             </Button>
@@ -43,10 +44,10 @@ function ChartsPage(props) {
                 sx={{
                   //maxWidth: "200px",
                   //padding: 1,
-                  backgroundColor: "#F5EFEF"
+                //  backgroundColor: "#F5EFEF"
                 }}
-              >
-                <PieRechartComponent />
+              >Project failure rate/ success rate
+                <PieComponent />
               </Paper>
             </Button>
           </Grid>
