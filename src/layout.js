@@ -87,7 +87,7 @@ function Layout(props) {
 
   return (
     <div className={classes.root}>
-      <SearchAppBar />
+      {/* <SearchAppBar /> */}
       <Drawer
         variant="permanent"
         className={classes.drawer}
@@ -545,9 +545,9 @@ function Layout(props) {
           </Box>
         ) : showcomponent === 2 ? (
           <ChartsPage />
-        //  <>this is charts page</>
-
         ) : (
+          //  <>this is charts page</>
+
           <>This is home page</>
         )}
       </Box>
