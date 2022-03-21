@@ -11,6 +11,7 @@ import PieRechartComponent from "./piechart";
 import PieComponent from "./piechartRate.js";
 import BarChartComponent from "./barchart";
 import CustomBarChart from "./customBarchart";
+import LineComponent from "./siglestrokelinechart";
 const styles = (theme) => ({});
 
 function ChartsPage(props) {
@@ -55,7 +56,15 @@ function ChartsPage(props) {
             <Button>
               <Paper elevation={2} sx={{}}>
                 project with/without pipeline -
-                <CustomBarChart />
+                <CustomBarChart />                
+              </Paper>
+            </Button>
+          </Grid>
+          <Grid item lg={6}>
+            <Button>
+              <Paper elevation={2} sx={{}}>
+              Project last use pipelie                 
+                <LineComponent />
               </Paper>
             </Button>
           </Grid>
