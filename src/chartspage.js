@@ -8,7 +8,9 @@ import Button from "@mui/material/Button";
 
 import LineRechartComponent from "./linechart";
 import PieRechartComponent from "./piechart";
-import PieComponent from "./piechartRate.js"
+import PieComponent from "./piechartRate.js";
+import BarChartComponent from "./barchart";
+
 const styles = (theme) => ({});
 
 function ChartsPage(props) {
@@ -18,36 +20,41 @@ function ChartsPage(props) {
       <Box sx={{ flexGrow: 1 }}>
         <Grid
           container
-          spacing={2}
-          direction="row"
-          justifyContent="center"
-          alignItems="center"
+          spacing={0}
+          // direction="row"
+          // justifyContent="center"
+          // alignItems="center"
         >
-          <Grid item xs={6}>
+          <Grid item lg={4}>
             <Button>
-              <Paper
-                elevation={2}
-                sx={{
-                  //maxWidth: "200px",
-                  //padding: 1,
-                 // backgroundColor: "#F5EFEF"
-                }}
-              >Project  branchng strategy
+              <Paper elevation={2} sx={{}}>
+                Project branchng strategy
                 <LineRechartComponent />
+              </Paper>
+            </Button>
+          </Grid>
+          <Grid item lg={1}></Grid>
+          {/* <Grid item lg={4}>
+            <Button>
+              <Paper elevation={2} sx={{}}>
+                Project failure rate/ success rate
+                <PieComponent />
+              </Paper>
+            </Button>
+          </Grid> */}
+          <Grid item lg={4}>
+            <Button>
+              <Paper elevation={2} sx={{}}>
+                Project failure rate/ success rate
+                <PieComponent />
               </Paper>
             </Button>
           </Grid>
           <Grid item xs={6}>
             <Button>
-              <Paper
-                elevation={2}
-                sx={{
-                  //maxWidth: "200px",
-                  //padding: 1,
-                //  backgroundColor: "#F5EFEF"
-                }}
-              >Project failure rate/ success rate
-                <PieComponent />
+              <Paper elevation={2} sx={{}}>
+                project with least stages
+                <BarChartComponent />
               </Paper>
             </Button>
           </Grid>

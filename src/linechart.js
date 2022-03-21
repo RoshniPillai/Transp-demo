@@ -14,33 +14,33 @@ class LineRechartComponent extends React.Component {
     {
       name: "2018",
       "Active Branches": 343,
-      "Commits": 234
+      Commits: 234
     },
     {
       name: " 2019",
       "Active Branches": 232,
-      "Commits": 326
+      Commits: 326
     },
     {
       name: "2020",
       "Active Branches": 455,
-      "Commits": 455
+      Commits: 455
     },
     {
       name: "2021",
       "Active Branches": 264,
-      "Commits": 465
+      Commits: 465
     },
     {
       name: "2022",
       "Active Branches": 275,
-      "Commits": 453
+      Commits: 453
     }
   ];
 
   render() {
     return (
-          <LineChart
+      <LineChart
         width={400}
         height={300}
         data={this.data}
