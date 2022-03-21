@@ -17,14 +17,22 @@ function ChartsPage(props) {
   const { classes } = props;
   return (
     <>
-      <Box sx={{ flexGrow: 1 }}>
-        <Grid
-          container
-          direction="row"
-          justifyContent="center"
-          alignItems="center"
-        >
-          <Grid item xs={3}>
+      <Box sx={{ flexgrow: 1 }}>
+        <Grid container spacing={2}>
+          <Grid item xs={4}>
+            <Button>
+              <Paper
+                elevation={2}
+                sx={{
+                  //padding: 1,
+                  backgroundColor: "#F5EFEF"
+                }}
+              >
+                <LineRechartComponent />
+              </Paper>
+            </Button>
+          </Grid>
+          <Grid item xs={4}>
             <Button>
               <Paper
                 elevation={2}
@@ -40,15 +48,15 @@ function ChartsPage(props) {
           </Grid>
         </Grid>
       </Box>
-      {/* <Box p={1} sx={{ bgcolor: "#FFFFFF" }}>
+      <Box p={1} sx={{ bgcolor: "#FFFFFF" }}>
         <Grid container spacing={2}>
           <Grid item xs={12}>
             <LineRechartComponent />
-            <Divider />
-            <PieRechartComponent />
+
+            {/* <PieRechartComponent /> */}
           </Grid>
         </Grid>
-      </Box> */}
+      </Box>
     </>
   );
 }

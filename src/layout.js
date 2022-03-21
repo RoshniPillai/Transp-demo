@@ -17,7 +17,7 @@ import MailIcon from "@material-ui/icons/Mail";
 import WidgetsOutlinedIcon from "@mui/icons-material/WidgetsOutlined";
 import HomeIcon from "@mui/icons-material/Home";
 import Button from "@material-ui/core/Button";
-import Dashboard from "./dashboard";
+import ChartsPage from "./chartspage";
 const styles = (theme) => ({
   // The main flex container for the app's layout. Its min-height
   // is set to `100vh` so it always fill the height of the screen.
@@ -544,8 +544,9 @@ function Layout(props) {
             </>
           </Box>
         ) : showcomponent === 2 ? (
-          // <ChartsPage />
-          <>this is charts page</>
+          <ChartsPage />
+        //  <>this is charts page</>
+
         ) : (
           <>This is home page</>
         )}
