@@ -188,9 +188,9 @@ function Layout(props) {
         }}
         classes={classes.main}
       >
-        <Box>
+        {/* <Box>
           <TextField id="outlined-search" label="Search field" type="search" />
-        </Box>
+        </Box> */}
         {showcomponent === 1 ? (
           <Box sx={{ flexGrow: 1 }}>
             <>
