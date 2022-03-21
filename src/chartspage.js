@@ -14,7 +14,8 @@ import PieRechartComponent from "./piechart";
 import PieComponent from "./piechartRate.js";
 import BarChartComponent from "./barchart";
 import CustomBarChart from "./customBarchart";
-import LineComponent from "./siglestrokelinechart";
+import LineComponent from "./singlestrokelinechart";
+import ActiveShapePie from "./activeshapePie";
 const styles = (theme) => ({});
 
 function ChartsPage(props) {
@@ -92,7 +93,9 @@ function ChartsPage(props) {
             <Tab label="Domain 3" value="3" />
           </TabList>
         </Box>
-        <TabPanel value="1">Domain 1</TabPanel>
+        <TabPanel value="1">
+          <ActiveShapePie />
+        </TabPanel>
         <TabPanel value="2">Domain 2</TabPanel>
         <TabPanel value="3">Domain 3</TabPanel>
       </TabContext>
