@@ -67,10 +67,11 @@ function ChartsPage(props) {
             
               <Paper elevation={2} sx={{}}>
                 project with/without pipeline -
-                <CustomBarChart />                
-              </Paper>
-              <Button onClick={() => setshowDetails(1)}> View deails
-            </Button>
+                <CustomBarChart />
+                <Button onClick={() => setshowDetails(1)}> View deails
+            </Button>                
+              </Paper>              
+              </Paper>              
           </Grid>
           <Grid item lg={6}>
             <Button>
