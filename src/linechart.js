@@ -12,35 +12,35 @@ import {
 class LineRechartComponent extends React.Component {
   data = [
     {
-      name: "Jan 2019",
-      "Product A": 3432,
-      "Procuct B": 2342
+      name: "2018",
+      "Active Branches": 343,
+      "Commits": 234
     },
     {
-      name: "Feb 2019",
-      "Product A": 2342,
-      "Procuct B": 3246
+      name: " 2019",
+      "Active Branches": 232,
+      "Commits": 326
     },
     {
-      name: "Mar 2019",
-      "Product A": 4565,
-      "Procuct B": 4556
+      name: "2020",
+      "Active Branches": 455,
+      "Commits": 455
     },
     {
-      name: "Apr 2019",
-      "Product A": 6654,
-      "Procuct B": 4465
+      name: "2021",
+      "Active Branches": 264,
+      "Commits": 465
     },
     {
-      name: "May 2019",
-      "Product A": 8765,
-      "Procuct B": 4553
+      name: "2022",
+      "Active Branches": 275,
+      "Commits": 453
     }
   ];
 
   render() {
     return (
-      <LineChart
+          <LineChart
         width={400}
         height={250}
         data={this.data}
@@ -51,8 +51,8 @@ class LineRechartComponent extends React.Component {
         <YAxis />
         <Tooltip />
         <Legend />
-        <Line type="monotone" dataKey="Product A" stroke="#0095FF" />
-        <Line type="monotone" dataKey="Procuct B" stroke="#FF0000" />
+        <Line type="monotone" dataKey="Active Branches" stroke="#0095FF" />
+        <Line type="monotone" dataKey="Commits" stroke="#FF0000" />
       </LineChart>
     );
   }
