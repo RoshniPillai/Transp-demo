@@ -50,6 +50,8 @@ export default function CustomBarChart() {
     <div>
       {/* <p>Click each rectangle </p> */}
       <BarChart width={400} height={200} data={data}>
+        {/* <XAxis type="number" hide />
+       <YAxis type="category" width={150} padding={{ left: 20 }} dataKey="name"/> */}
         <Bar dataKey="uv" onClick={handleClick}>
           {data.map((entry, index) => (
             <Cell
