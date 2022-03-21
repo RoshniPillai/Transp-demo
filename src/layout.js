@@ -183,7 +183,7 @@ function Layout(props) {
         p={3}
         sx={{
           flexGrow: 1,
-          paddingTop: "74px",
+          paddingTop: "20px",
           backgroundColor: "#F2F3F5"
         }}
         classes={classes.main}
@@ -192,7 +192,7 @@ function Layout(props) {
           <TextField
             size="small"
             id="outlined-search"
-            label="Search field"
+            label="Search"
             type="search"
           />
         </Box>
