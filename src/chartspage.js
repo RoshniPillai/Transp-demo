@@ -50,10 +50,11 @@ function ChartsPage(props) {
               </Paper>
             </Button>
           </Grid>
+          <Grid item lg={1}></Grid>
           <Grid item lg={4}>
             <Button>
               <Paper elevation={2} sx={{}}>
-                custom
+                project with/without pipeline -
                 <CustomBarChart />
               </Paper>
             </Button>
