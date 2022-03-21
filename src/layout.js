@@ -188,7 +188,13 @@ function Layout(props) {
         }}
         classes={classes.main}
       >
-        <Box display="flex" flexGrow={1} alignItems="end" justifyContent="end">
+        <Box
+          display="flex"
+          flexGrow={1}
+          alignItems="end"
+          justifyContent="end"
+          sx={{ paddingRight: "20px", paddingBottom: "20px" }}
+        >
           <TextField
             size="small"
             id="outlined-search"
