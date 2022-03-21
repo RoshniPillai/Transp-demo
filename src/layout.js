@@ -18,6 +18,7 @@ import WidgetsOutlinedIcon from "@mui/icons-material/WidgetsOutlined";
 import HomeIcon from "@mui/icons-material/Home";
 import Button from "@material-ui/core/Button";
 import ChartsPage from "./chartspage";
+import TextField from "@mui/material/TextField";
 const styles = (theme) => ({
   // The main flex container for the app's layout. Its min-height
   // is set to `100vh` so it always fill the height of the screen.
@@ -38,6 +39,9 @@ const styles = (theme) => ({
     width: "inherit"
     // width: 150,
     // backgroundColor: theme.palette.background.default
+  },
+  listItemDone: {
+    color: "#041c49 !important"
   },
   toolbarIe11: {
     display: "flex",
@@ -88,6 +92,7 @@ function Layout(props) {
   return (
     <div className={classes.root}>
       {/* <SearchAppBar /> */}
+
       <Drawer
         variant="permanent"
         className={classes.drawer}
@@ -121,12 +126,17 @@ function Layout(props) {
                   </IconButton>
                 </ListItemIcon>
               </ListItem>
-              <ListItem button>
+              <ListItem button onClick={() => setshowcomponent(1)}>
                 <ListItemIcon>
                   <IconButton
                     color="inherit"
                     aria-label="open drawer"
-                    onClick={() => setshowcomponent(1)}
+                    //onClick={() => setshowcomponent(1)}
+                    className={
+                      showcomponent === 1
+                        ? classes.listItemDone
+                        : classes.listItem
+                    }
                     edge="end"
                     sx={{ ...open }}
                   >
@@ -178,6 +188,9 @@ function Layout(props) {
         }}
         classes={classes.main}
       >
+        <Box>
+          <TextField id="outlined-search" label="Search field" type="search" />
+        </Box>
         {showcomponent === 1 ? (
           <Box sx={{ flexGrow: 1 }}>
             <>
