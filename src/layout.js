@@ -179,14 +179,375 @@ function Layout(props) {
         classes={classes.main}
       >
         {showcomponent === 1 ? (
-          <Dashboard />
+          <Box sx={{ flexGrow: 1 }}>
+            <>
+              <Grid
+                container
+                direction="row"
+                justifyContent="center"
+                alignItems="center"
+              >
+                <Grid item xs={3}>
+                  <Button>
+                    <Paper
+                      elevation={2}
+                      sx={{
+                        maxWidth: "200px",
+                        //padding: theme.spacing(1.5, 3),
+                        padding: theme.spacing(1.5, 3),
+                        backgroundColor: "#F5EFEF"
+                      }}
+                    >
+                      <Grid container spacing={1}>
+                        <Grid xs={12}>
+                          <Typography
+                            variant="body1"
+                            display="block"
+                            align="center"
+                          >
+                            JIRA
+                          </Typography>
+                        </Grid>
+                        <Grid item xs={6}>
+                          0
+                          <Typography
+                            variant="caption"
+                            display="block"
+                            align="center"
+                          >
+                            New Issues
+                          </Typography>
+                        </Grid>
+                        <Grid item xs={6}>
+                          0
+                          <Typography
+                            variant="caption"
+                            display="block"
+                            align="center"
+                          >
+                            New Reports
+                          </Typography>
+                        </Grid>
+                      </Grid>
+                    </Paper>
+                  </Button>
+                </Grid>
+                <Grid item xs={3}>
+                  <Button>
+                    <Paper
+                      elevation={2}
+                      sx={{
+                        maxWidth: "200px",
+                        padding: theme.spacing(1.5, 3),
+                        backgroundColor: "#D0E2E2"
+                      }}
+                    >
+                      <Grid container spacing={1}>
+                        <Grid xs={12}>
+                          <Typography
+                            variant="body1"
+                            display="block"
+                            align="center"
+                          >
+                            Automation
+                          </Typography>
+                        </Grid>
+                        <Grid item xs={6}>
+                          0
+                          <Typography
+                            variant="caption"
+                            display="block"
+                            align="center"
+                          >
+                            New Issues
+                          </Typography>
+                        </Grid>
+                        <Grid item xs={6}>
+                          0
+                          <Typography
+                            variant="caption"
+                            display="block"
+                            align="center"
+                          >
+                            New Reports
+                          </Typography>
+                        </Grid>
+                      </Grid>
+                    </Paper>
+                  </Button>
+                </Grid>
+                <Grid item xs={3}>
+                  <Button>
+                    <Paper
+                      elevation={2}
+                      sx={{
+                        maxWidth: "200px",
+                        padding: theme.spacing(1.5, 3),
+                        backgroundColor: "#FFF2E5"
+                      }}
+                    >
+                      <Grid container spacing={1}>
+                        <Grid xs={12}>
+                          <Typography
+                            variant="body1"
+                            display="block"
+                            align="center"
+                          >
+                            Functional
+                          </Typography>
+                        </Grid>
+                        <Grid item xs={6}>
+                          0
+                          <Typography
+                            variant="caption"
+                            display="block"
+                            align="center"
+                          >
+                            New Issues
+                          </Typography>
+                        </Grid>
+                        <Grid item xs={6}>
+                          8
+                          <Typography
+                            variant="caption"
+                            display="block"
+                            align="center"
+                          >
+                            New Reports
+                          </Typography>
+                        </Grid>
+                      </Grid>
+                    </Paper>
+                  </Button>
+                </Grid>
+                <Grid item xs={3}>
+                  <Button onClick={() => setshowcomponent(2)}>
+                    <Paper
+                      elevation={2}
+                      sx={{
+                        maxWidth: "200px",
+                        padding: theme.spacing(1.5, 3),
+                        backgroundColor: "#E9F3C2"
+                      }}
+                    >
+                      <Grid container spacing={1}>
+                        <Grid xs={12}>
+                          <Typography
+                            variant="body1"
+                            display="block"
+                            align="center"
+                          >
+                            GitLab
+                          </Typography>
+                        </Grid>
+                        <Grid item xs={6}>
+                          0
+                          <Typography
+                            variant="caption"
+                            display="block"
+                            align="center"
+                          >
+                            New Issues
+                          </Typography>
+                        </Grid>
+                        <Grid item xs={6}>
+                          0
+                          <Typography
+                            variant="caption"
+                            display="block"
+                            align="center"
+                          >
+                            New Reports
+                          </Typography>
+                        </Grid>
+                      </Grid>
+                    </Paper>
+                  </Button>
+                </Grid>
+                <Grid item xs={3}>
+                  <Button>
+                    <Paper
+                      elevation={2}
+                      sx={{
+                        maxWidth: "200px",
+                        padding: theme.spacing(1.5, 3),
+                        backgroundColor: "#F3DABF"
+                      }}
+                    >
+                      <Grid container spacing={1}>
+                        <Grid xs={12}>
+                          <Typography
+                            variant="body1"
+                            display="block"
+                            align="center"
+                          >
+                            SonarQube
+                          </Typography>
+                        </Grid>
+                        <Grid item xs={6}>
+                          0
+                          <Typography
+                            variant="caption"
+                            display="block"
+                            align="center"
+                          >
+                            New Issues
+                          </Typography>
+                        </Grid>
+                        <Grid item xs={6}>
+                          0
+                          <Typography
+                            variant="caption"
+                            display="block"
+                            align="center"
+                          >
+                            New Reports
+                          </Typography>
+                        </Grid>
+                      </Grid>
+                    </Paper>
+                  </Button>
+                </Grid>
+                <Grid item xs={3}>
+                  <Button>
+                    <Paper
+                      elevation={2}
+                      sx={{
+                        maxWidth: "200px",
+                        padding: theme.spacing(1.5, 3),
+                        backgroundColor: "#CCF2FF"
+                      }}
+                    >
+                      <Grid container spacing={1}>
+                        <Grid xs={12}>
+                          <Typography
+                            variant="body1"
+                            display="block"
+                            align="center"
+                          >
+                            ServiceNow
+                          </Typography>
+                        </Grid>
+                        <Grid item xs={6}>
+                          0
+                          <Typography
+                            variant="caption"
+                            display="block"
+                            align="center"
+                          >
+                            New Issues
+                          </Typography>
+                        </Grid>
+                        <Grid item xs={6}>
+                          0
+                          <Typography
+                            variant="caption"
+                            display="block"
+                            align="center"
+                          >
+                            New Reports
+                          </Typography>
+                        </Grid>
+                      </Grid>
+                    </Paper>
+                  </Button>
+                </Grid>
+                <Grid item xs={3}>
+                  <Button>
+                    <Paper
+                      elevation={2}
+                      sx={{
+                        maxWidth: "200px",
+                        padding: theme.spacing(1.5, 3),
+                        backgroundColor: "#F8E1A6"
+                      }}
+                    >
+                      <Grid container spacing={1}>
+                        <Grid xs={12}>
+                          <Typography
+                            variant="body1"
+                            display="block"
+                            align="center"
+                          >
+                            CheckMarx
+                          </Typography>
+                        </Grid>
+                        <Grid item xs={6}>
+                          0
+                          <Typography
+                            variant="caption"
+                            display="block"
+                            align="center"
+                          >
+                            New Issues
+                          </Typography>
+                        </Grid>
+                        <Grid item xs={6}>
+                          0
+                          <Typography
+                            variant="caption"
+                            display="block"
+                            align="center"
+                          >
+                            New Reports
+                          </Typography>
+                        </Grid>
+                      </Grid>
+                    </Paper>
+                  </Button>
+                </Grid>
+                <Grid item xs={3}>
+                  <Button>
+                    <Paper
+                      elevation={2}
+                      sx={{
+                        maxWidth: "200px",
+                        padding: theme.spacing(1.5, 3),
+                        backgroundColor: "#C4C4E7"
+                      }}
+                    >
+                      <Grid container spacing={1}>
+                        <Grid xs={12}>
+                          <Typography
+                            variant="body1"
+                            display="block"
+                            align="center"
+                          >
+                            Others
+                          </Typography>
+                        </Grid>
+                        <Grid item xs={6}>
+                          0
+                          <Typography
+                            variant="caption"
+                            display="block"
+                            align="center"
+                          >
+                            New Issues
+                          </Typography>
+                        </Grid>
+                        <Grid item xs={6}>
+                          0
+                          <Typography
+                            variant="caption"
+                            display="block"
+                            align="center"
+                          >
+                            New Reports
+                          </Typography>
+                        </Grid>
+                      </Grid>
+                    </Paper>
+                  </Button>
+                </Grid>
+              </Grid>
+            </>
+          </Box>
         ) : showcomponent === 2 ? (
           // <ChartsPage />
           <>this is charts page</>
         ) : (
-          <>
-            <Grid container spacing={4}></Grid>
-          </>
+          <>This is home page</>
         )}
       </Box>
     </div>
