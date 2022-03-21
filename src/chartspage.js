@@ -71,7 +71,6 @@ function ChartsPage(props) {
                 <Button onClick={() => setshowDetails(1)}> View deails
             </Button>                
               </Paper>              
-              </Paper>              
           </Grid>
           <Grid item lg={6}>
             <Button>
