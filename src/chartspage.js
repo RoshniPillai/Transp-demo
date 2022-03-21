@@ -10,7 +10,7 @@ import LineRechartComponent from "./linechart";
 import PieRechartComponent from "./piechart";
 import PieComponent from "./piechartRate.js";
 import BarChartComponent from "./barchart";
-
+import CustomBarChart from "./customBarchart";
 const styles = (theme) => ({});
 
 function ChartsPage(props) {
@@ -34,14 +34,6 @@ function ChartsPage(props) {
             </Button>
           </Grid>
           <Grid item lg={1}></Grid>
-          {/* <Grid item lg={4}>
-            <Button>
-              <Paper elevation={2} sx={{}}>
-                Project failure rate/ success rate
-                <PieComponent />
-              </Paper>
-            </Button>
-          </Grid> */}
           <Grid item lg={4}>
             <Button>
               <Paper elevation={2} sx={{}}>
@@ -50,11 +42,19 @@ function ChartsPage(props) {
               </Paper>
             </Button>
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={4}>
             <Button>
               <Paper elevation={2} sx={{}}>
                 project with least stages
                 <BarChartComponent />
+              </Paper>
+            </Button>
+          </Grid>
+          <Grid item lg={4}>
+            <Button>
+              <Paper elevation={2} sx={{}}>
+                custom
+                <CustomBarChart />
               </Paper>
             </Button>
           </Grid>
