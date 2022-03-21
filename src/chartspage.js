@@ -98,15 +98,14 @@ function ChartsPage(props) {
           container
         >
           <Grid item lg={4}>
-            <Button>
-              <Paper elevation={2} sx={{}}>
+           
               
           <ActiveShapePie />
             Services within Domain 1
-              </Paper>
-            </Button>
+             
           </Grid>
-          <Grid item lg={4}>
+          <Grid item lg={1}></Grid>
+          <Grid item lg={6}>
             <EnhancedTableHead />
           </Grid>
           </Grid>

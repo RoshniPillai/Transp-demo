@@ -99,7 +99,7 @@ export default function ActiveShapePie() {
         data={data}
         cx={200}
         cy={200}
-        innerRadius={80}
+        innerRadius={60}
         outerRadius={80}
         fill="#8884d8"
         dataKey="value"
